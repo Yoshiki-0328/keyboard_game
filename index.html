@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>キーボードゲーム</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="title">
+        <h1>Typing Game</h1>
+      </div>
+      <button class="start_btn" v-on:click="start_clicked" v-if="!start_flag">START</button>
+
+      <div v-if="start_flag">
+        <p class="question" v-if="!clear">{{questions[quesiton_num]}}</p>
+        <div class="clear_wrapper">
+          <p class="clear" v-if="clear">CLEAR</p>
+        </div> 
+        <input type="text" class="answer" v-model="answer" v-if="!clear" />
+        <div class="gage_wrapper">
+          <div class="gage" v-bind:style="styleObj"></div>
+        </div>
+        <p class="question_number">{{quesiton_num_view}}/5</p>
+      </div>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
