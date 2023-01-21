@@ -19,7 +19,7 @@
         <div class="clear_wrapper">
           <p class="clear" v-if="clear">CLEAR</p>
         </div> 
-        <input type="text" class="answer" v-model="answer" v-if="!clear" />
+        <input id="typeForm" type="text" class="answer" v-model="answer" v-if="!clear" />
         <div class="gage_wrapper">
           <div class="gage" v-bind:style="styleObj"></div>
         </div>
