@@ -25,6 +25,9 @@ const app = Vue.createApp({
     methods:{
         start_clicked:function(){
             this.start_flag=true
+            this.$nextTick(function(){
+                document.getElementById('typeForm').focus();
+            })
         }
     },
     watch:{

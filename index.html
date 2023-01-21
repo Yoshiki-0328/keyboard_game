@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>キーボードゲーム</title>
+    <title>keyboard_game</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -19,7 +19,7 @@
         <div class="clear_wrapper">
           <p class="clear" v-if="clear">CLEAR</p>
         </div> 
-        <input type="text" class="answer" v-model="answer" v-if="!clear" />
+        <input id="typeForm" type="text" class="answer" v-model="answer" v-if="!clear" />
         <div class="gage_wrapper">
           <div class="gage" v-bind:style="styleObj"></div>
         </div>
